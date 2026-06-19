@@ -27,6 +27,7 @@ public:
     string toString() const;
 
     static Date today();
+    static Date fromString(const string& text);
 
     bool operator<(const Date& other) const;
     bool operator>(const Date& other) const;

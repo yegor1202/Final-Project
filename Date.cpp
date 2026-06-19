@@ -81,6 +81,22 @@ Date Date::today()
         localTime->tm_year + 1900
     );
 };
+Date Date::fromString(const string& text)
+{
+    stringstream ss(text);
+
+    int day;
+    int month;
+    int year;
+
+    char dot;
+
+    ss >> day >> dot
+       >> month >> dot
+       >> year;
+
+    return Date(day, month, year);
+}
 
 bool Date::operator<(const Date& other) const
 {

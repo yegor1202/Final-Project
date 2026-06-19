@@ -34,6 +34,11 @@ public:
 
     vector<Project>& getProjects();
     vector<Worker>& getWorkers();
+    vector<Project>& getProjects();
+    const vector<Project>& getProjects() const;
+    vector<Worker>& getWorkers();
+    const vector<Worker>& getWorkers() const;
+
     int getTotalTaskCount() const;
     int getCompletedTaskCount() const;
     int getExpiredTaskCount() const;

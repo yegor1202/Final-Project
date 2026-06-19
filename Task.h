@@ -1,8 +1,8 @@
 #ifndef TASK_H
 #define TASK_H
 
-#include <string>
 #include <iostream>
+#include <string>
 
 #include "Date.h"
 
@@ -16,7 +16,9 @@ private:
     string description;
     int priority;
     bool completed;
+
     Date deadline;
+
     int workerId;
 
 public:
@@ -35,20 +37,26 @@ public:
     string getDescription() const;
     int getPriority() const;
     bool isCompleted() const;
+
     Date getDeadline() const;
+
     int getWorkerId() const;
 
     void setTitle(const string& title);
     void setDescription(const string& description);
     void setPriority(int priority);
 
+    void setCompleted(bool completed);
+    void setWorkerId(int workerId);
+    void setDeadline(const Date& deadline);
+
     void assignWorker(int workerId);
 
     void complete();
+
     bool isExpired() const;
 
     void display() const;
 };
 
 #endif
-

@@ -211,3 +211,12 @@ void TaskManager::showExpiredTasks() const
     };
 };
 
+vector<Project>& TaskManager::getProjects()
+{
+    return projects;
+}
+
+vector<Worker>& TaskManager::getWorkers()
+{
+    return workers;
+}

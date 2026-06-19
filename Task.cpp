@@ -77,7 +77,20 @@ void Task::setPriority(int priority)
 {
     this->priority = priority;
 };
+void Task::setCompleted(bool completed)
+{
+    this->completed = completed;
+}
 
+void Task::setWorkerId(int workerId)
+{
+    this->workerId = workerId;
+}
+
+void Task::setDeadline(const Date& deadline)
+{
+    this->deadline = deadline;
+}
 void Task::assignWorker(int workerId)
 {
     this->workerId = workerId;
@@ -93,6 +106,18 @@ bool Task::isExpired() const
     return !completed &&
            deadline < Date::today();
 };
+
+
+void Task::setCompleted(bool completed)
+{
+    this->completed = completed;
+};
+void Task::setWorkerId(int workerId)
+{
+    this->workerId = workerId;
+};
+
+
 
 void Task::display() const
 {
