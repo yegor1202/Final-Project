@@ -2,11 +2,11 @@
 #define TASK_H
 
 #include <string>
+#include <iostream>
+
 #include "Date.h"
 
 using namespace std;
-
-class Worker;
 
 class Task
 {
@@ -16,9 +16,8 @@ private:
     string description;
     int priority;
     bool completed;
-
     Date deadline;
-    Worker* assignedWorker;
+    int workerId;
 
 public:
     Task();
@@ -36,19 +35,20 @@ public:
     string getDescription() const;
     int getPriority() const;
     bool isCompleted() const;
-
     Date getDeadline() const;
-    Worker* getAssignedWorker() const;
+    int getWorkerId() const;
 
     void setTitle(const string& title);
     void setDescription(const string& description);
     void setPriority(int priority);
 
-    void assignWorker(Worker* worker);
-    void complete();
+    void assignWorker(int workerId);
 
+    void complete();
     bool isExpired() const;
+
     void display() const;
 };
 
 #endif
+
