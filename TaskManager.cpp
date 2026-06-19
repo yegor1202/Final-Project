@@ -155,7 +155,7 @@ void TaskManager::showProjects() const
 {
     if (projects.empty())
     {
-        cout << "Ïðîåêòû îòñóòñòâóþò." << endl;
+        cout << "ÐŸÑ€Ð¾ÐµÐºÑ‚Ñ‹ Ð¾Ñ‚ÑÑƒÑ‚ÑÑ‚Ð²ÑƒÑŽÑ‚." << endl;
         return;
     };
 
@@ -169,7 +169,7 @@ void TaskManager::showWorkers() const
 {
     if (workers.empty())
     {
-        cout << "Ñîòðóäíèêè îòñóòñòâóþò." << endl;
+        cout << "Ð¡Ð¾Ñ‚Ñ€ÑƒÐ´Ð½Ð¸ÐºÐ¸ Ð¾Ñ‚ÑÑƒÑ‚ÑÑ‚Ð²ÑƒÑŽÑ‚." << endl;
         return;
     }
 
@@ -191,12 +191,12 @@ void TaskManager::showExpiredTasks() const
             {
                 if (!found)
                 {
-                    cout << "Ïðîñðî÷åííûå çàäà÷è:" << endl;
+                    cout << "ÐŸÑ€Ð¾ÑÑ€Ð¾Ñ‡ÐµÐ½Ð½Ñ‹Ðµ Ð·Ð°Ð´Ð°Ñ‡Ð¸:" << endl;
                     found = true;
                 };
 
                 cout << endl;
-                cout << "Ïðîåêò: "
+                cout << "ÐŸÑ€Ð¾ÐµÐºÑ‚: "
                      << project.getName()
                      << endl;
 
@@ -207,7 +207,7 @@ void TaskManager::showExpiredTasks() const
 
     if (!found)
     {
-        cout << "Ïðîñðî÷åííûõ çàäà÷ íåò." << endl;
+        cout << "ÐŸÑ€Ð¾ÑÑ€Ð¾Ñ‡ÐµÐ½Ð½Ñ‹Ñ… Ð·Ð°Ð´Ð°Ñ‡ Ð½ÐµÑ‚." << endl;
     };
 };
 const vector<Project>& TaskManager::getProjects() const

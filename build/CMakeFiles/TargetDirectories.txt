@@ -1,0 +1,3 @@
+C:/Users/yaego/Desktop/VSCode/Новая папка/build/CMakeFiles/TaskManager.dir
+C:/Users/yaego/Desktop/VSCode/Новая папка/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/yaego/Desktop/VSCode/Новая папка/build/CMakeFiles/ZERO_CHECK.dir

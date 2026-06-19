@@ -1,0 +1,10 @@
+^C:\USERS\YAEGO\DESKTOP\VSCODE\НОВАЯ ПАПКА\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/yaego/Desktop/VSCode/Новая папка" "-BC:/Users/yaego/Desktop/VSCode/Новая папка/build" --check-stamp-file "C:/Users/yaego/Desktop/VSCode/Новая папка/build/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
