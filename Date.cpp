@@ -65,6 +65,22 @@ string Date::toString() const
     return ss.str();
 };
 
+Date Date::today()
+{
+    auto now = chrono::system_clock::now();
+
+    time_t currentTime =
+        chrono::system_clock::to_time_t(now);
+
+    tm* localTime =
+        localtime(&currentTime);
+
+    return Date(
+        localTime->tm_mday,
+        localTime->tm_mon + 1,
+        localTime->tm_year + 1900
+    );
+};
 
 bool Date::operator<(const Date& other) const
 {

@@ -26,6 +26,8 @@ public:
 
     string toString() const;
 
+    static Date today();
+
     bool operator<(const Date& other) const;
     bool operator>(const Date& other) const;
     bool operator==(const Date& other) const;
