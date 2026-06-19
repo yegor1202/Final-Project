@@ -31,12 +31,15 @@ public:
         int projectId,
         int taskId
     );
+    
+    bool addTask(
+    int projectId,
+    const Task& task
+    );
 
     vector<Project>& getProjects();
     vector<Worker>& getWorkers();
-    vector<Project>& getProjects();
     const vector<Project>& getProjects() const;
-    vector<Worker>& getWorkers();
     const vector<Worker>& getWorkers() const;
 
     int getTotalTaskCount() const;

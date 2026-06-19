@@ -108,16 +108,6 @@ bool Task::isExpired() const
 };
 
 
-void Task::setCompleted(bool completed)
-{
-    this->completed = completed;
-};
-void Task::setWorkerId(int workerId)
-{
-    this->workerId = workerId;
-};
-
-
 
 void Task::display() const
 {

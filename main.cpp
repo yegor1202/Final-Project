@@ -1,9 +1,11 @@
 ﻿#include <iostream>
-
+#include <string>
+#include "Task.h"
+#include "TaskManager.h"
 using namespace std;
 
 int main()
-{
+{   TaskManager manager;
     int choice;
 
     do
@@ -35,7 +37,59 @@ int main()
             break;
 
         case 3:
+        {
+            int projectId;
+            int taskId;
+            int priority;
+
+            string title;
+            string description;
+            string deadlineText;
+
+            cout << "ID проекта: ";
+            cin >> projectId;
+
+            cout << "ID задачи: ";
+            cin >> taskId;
+
+            cin.ignore();
+
+            cout << "Название: ";
+            getline(cin, title);
+
+            cout << "Описание: ";
+            getline(cin, description);
+
+            cout << "Приоритет: ";
+            cin >> priority;
+
+            cout << "Дедлайн (дд.мм.гггг): ";
+            cin >> deadlineText;
+
+            Task task(
+                taskId,
+                title,
+                description,
+                priority,
+                Date::fromString(deadlineText)
+            );
+
+            if (
+                manager.addTask(
+                    projectId,
+                    task
+                )
+            )
+            {
+                cout << "Задача добавлена.\n";
+            }
+            else
+            {
+                cout << "Проект не найден.\n";
+            }
+
             break;
+        };
 
         case 4:
             break;

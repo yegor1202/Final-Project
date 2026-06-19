@@ -210,13 +210,30 @@ void TaskManager::showExpiredTasks() const
         cout << "Просроченных задач нет." << endl;
     };
 };
-
-vector<Project>& TaskManager::getProjects()
+const vector<Project>& TaskManager::getProjects() const
 {
     return projects;
-}
+};
 
-vector<Worker>& TaskManager::getWorkers()
+const vector<Worker>& TaskManager::getWorkers() const
 {
     return workers;
-}
+};
+
+bool TaskManager::addTask(
+    int projectId,
+    const Task& task
+)
+{
+    Project* project =
+        findProjectById(projectId);
+
+    if (project == nullptr)
+    {
+        return false;
+    }
+
+    project->addTask(task);
+
+    return true;
+};

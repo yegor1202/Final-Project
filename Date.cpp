@@ -3,6 +3,7 @@
 #include <chrono>
 #include <ctime>
 #include <sstream>
+#include <string>
 
 Date::Date()
 {
